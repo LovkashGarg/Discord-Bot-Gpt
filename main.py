@@ -12,8 +12,8 @@ load_dotenv(); # loads dotenv values to this file
 MY_SECRET_KEY=os.getenv('token')
 
 
-import openai 
-openai.api_key=os.getenv('OPEN_AI_KEY')
+# import openai 
+# openai.api_key=os.getenv('OPEN_AI_KEY')
 
 # file = input("Enter 1, 2, or 3 for loading the chat:\n ")
 file = "1"
