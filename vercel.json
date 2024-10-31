@@ -4,20 +4,12 @@
       {
         "src": "main.js",
         "use": "@vercel/node"
-      },
-      {
-        "src": "app.py",
-        "use": "@vercel/python"
       }
     ],
     "routes": [
       {
-        "src": "/node/(.*)",   
+        "src": "/(.*)",
         "dest": "/main.js"
-      },
-      {
-        "src": "/python/(.*)",  
-        "dest": "/app.py"
       }
     ]
   }
