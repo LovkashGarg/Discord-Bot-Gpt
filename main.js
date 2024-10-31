@@ -2,6 +2,7 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+const { copyFileSync } = require('fs');
 const app = express();
 require('dotenv').config();
 // const cors = require('cors');
@@ -42,6 +43,7 @@ app.post('/api/generate', async (req, res) => {
     console.log(response.data.candidates[0].content.parts[0].text);
     return res.json(response.data.candidates[0].content.parts[0].text);
   } catch (error) {
+    console.log(error)
     res.status(500).json({ message: 'Error fetching the answer' });
   }
 });
