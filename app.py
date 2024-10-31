@@ -8,7 +8,10 @@ import main  # Import your main module
 app = Flask(__name__)
 
 def run_main():
-    main.main()  # Call the main function from main.py
+     try:
+        main.main()  # Call the main function from main.py
+     except Exception as e:
+        print(f"Error in main: {e}")
 
 @app.route('/')
 def home():

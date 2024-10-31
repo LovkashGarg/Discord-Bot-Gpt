@@ -1,7 +1,7 @@
 from dotenv import load_dotenv,dotenv_values
 import os
 import requests
-
+import time
 
 
     # response.raise_for_status()
@@ -39,6 +39,7 @@ class MyClient(discord.Client):
         print('Logged on as', self.user)
 
     async def on_message(self, message):
+      time.sleep(3) 
       global chat
       # chat +=f"{message.author} :{message.content}"
       print(f"message from author {message.author} :{message.content}")
