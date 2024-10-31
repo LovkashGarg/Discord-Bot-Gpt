@@ -51,7 +51,7 @@ class MyClient(discord.Client):
               try:
                 cleaned_message = message.content.replace(f"<@{self.user.id}>", "").strip()
                 chat+=cleaned_message
-                url = "http://localhost:5000/api/generate"
+                url = "https://discord-bot-gpt.onrender.com/api/generate"
                 payload = { 'question': chat}
                 headers = {
                     'Content-Type': 'application/json'
